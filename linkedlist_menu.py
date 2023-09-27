@@ -116,7 +116,7 @@ class LinkedList:
 
 ll = LinkedList()
 print()
-print("MENU:\n 1 INSERT\n 2 DELETE\n 3 UPDATE\n 4 EXIT")
+print("MENU:\n 1 INSERT\n 2 UPDATE\n 3 DELETE\n 4 EXIT")
 print()
 inp = int(input("Please enter a number from the menu corresponding to the operation to be performed: "))
 
@@ -146,7 +146,11 @@ while(inp!=4):
         if inpinsert==4:
             print("INSERT sub-menu exited")
             continue
-
+    elif inp==2:
+        print("UPDATE:")
+        inpupval=str(input("Enter the updated value: "))
+        inpupindex=int(input("Enter index where the value is to be updated: "))
+        
     else:
         print("Please enter a number present in the menu")
     inp = int(input("Please enter a number from the menu corresponding to the operation to be performed: "))   
