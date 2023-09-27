@@ -124,6 +124,7 @@ print()
 while(inp!=4):
     if inp==1:
         print("INSERT SUB-MENU:\n 1 INSERT AT THE BEGINNING\n 2 INSERT AT INDEX\n 3 INSERT AT THE END\n 4 EXIT INSERT SUB-MENU")
+        print()
         inpinsert=int(input("Please enter a number from the INSERT SUB-MENU corresponding to the type of insertion: "))
         while(inpinsert!=4):
             if inpinsert==1:
@@ -145,6 +146,7 @@ while(inp!=4):
         if inpinsert==4:
             print("INSERT SUB-MENU exited")
             ll.printLL()
+            print("--------------------------------------------------------------------------------------")
 
     elif inp==2:
         print("UPDATE:")
@@ -152,15 +154,17 @@ while(inp!=4):
         inpupindex=int(input("Enter index where the value is to be updated: "))
         ll.updateNode(inpupval,inpupindex)
         ll.printLL()
+        print("---------------------------------------------------------------------------------------")
     
     elif inp==3:
         print("DELETION SUB-MENU:\n 1 DELETE AT THE BEGINNING\n 2 DELETE AT INDEX\n 3 DELETE AT THE END\n 4 EXIT DELETION SUB-MENU")
+        print()
         inpdelete=int(input("Please enter a number from the sub-menu corresponding to the type of deletion: "))
         while(inpdelete!=4):
             if inpdelete==1:
                 ll.removeFirstNode()
                 ll.printLL()
-            elif inpinsert==2:
+            elif inpdelete==2:
                 indexdel = int(input("Enter index of value to be deleted: "))
                 ll.removeAtIndex(indexdel)
                 ll.printLL()
@@ -173,6 +177,7 @@ while(inp!=4):
         if inpdelete==4:
             print("DELETE sub-menu exited")
             ll.printLL()
+            print("-----------------------------------------------------------------------------------")
 
 
     else:
