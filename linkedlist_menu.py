@@ -116,15 +116,15 @@ class LinkedList:
 
 ll = LinkedList()
 print()
-print("MENU:\n 1 INSERT\n 2 UPDATE\n 3 DELETE\n 4 EXIT")
+print("MAIN MENU:\n 1 INSERT\n 2 UPDATE\n 3 DELETE\n 4 EXIT")
 print()
-inp = int(input("Please enter a number from the menu corresponding to the operation to be performed: "))
-
+inp = int(input("Please enter a number from the MAIN MENU corresponding to the operation to be performed: "))
+print()
 
 while(inp!=4):
     if inp==1:
-        print("INSERTION SUB-MENU:\n 1 INSERT AT THE BEGINNING\n 2 INSERT AT INDEX\n 3 INSERT AT THE END\n 4 EXIT INSERTION SUB-MENU")
-        inpinsert=int(input("Please enter a number from the sub-menu corresponding to the type of insertion: "))
+        print("INSERT SUB-MENU:\n 1 INSERT AT THE BEGINNING\n 2 INSERT AT INDEX\n 3 INSERT AT THE END\n 4 EXIT INSERT SUB-MENU")
+        inpinsert=int(input("Please enter a number from the INSERT SUB-MENU corresponding to the type of insertion: "))
         while(inpinsert!=4):
             if inpinsert==1:
                 inpinsbeg = str(input("Enter value to be inserted at the beginning: "))
@@ -140,17 +140,18 @@ while(inp!=4):
                 ll.insertAtEnd(inpinsend)
                 ll.printLL()
             else:
-                print("Please enter a number present in the sub-menu")
-            inpinsert=int(input("Please enter a number from the sub-menu corresponding to the type of insertion: "))
+                print("Please enter a number present in the INSERT SUB-MENU")
+            inpinsert=int(input("Please enter a number from the INSERT SUB-MENU corresponding to the type of insertion: "))
         if inpinsert==4:
-            print("INSERT sub-menu exited")
-            continue
+            print("INSERT SUB-MENU exited")
+            ll.printLL()
 
     elif inp==2:
         print("UPDATE:")
         inpupval=str(input("Enter the updated value: "))
         inpupindex=int(input("Enter index where the value is to be updated: "))
         ll.updateNode(inpupval,inpupindex)
+        ll.printLL()
     
     elif inp==3:
         print("DELETION SUB-MENU:\n 1 DELETE AT THE BEGINNING\n 2 DELETE AT INDEX\n 3 DELETE AT THE END\n 4 EXIT DELETION SUB-MENU")
@@ -171,12 +172,12 @@ while(inp!=4):
             inpinsert=int(input("Please enter a number from the sub-menu corresponding to the type of insertion: "))
         if inpdelete==4:
             print("DELETE sub-menu exited")
-            continue
+            ll.printLL()
 
 
     else:
         print("Please enter a number present in the menu")
-    inp = int(input("Please enter a number from the menu corresponding to the operation to be performed: "))   
+    inp = int(input("Please enter a number from the MAIN menu corresponding to the operation to be performed: "))   
 
 if inp==4:
     print("Program exited")
