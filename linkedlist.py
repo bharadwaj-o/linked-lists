@@ -97,7 +97,7 @@ class LinkedList:
         except:
             print("Data not found for deletion")
 
-    def sizOfLL(self):
+    def sizeOfLL(self):
         size=0
         if(self.head):
             current_node = self.head
@@ -113,8 +113,22 @@ class LinkedList:
         while(current_node):
             print(current_node.data)
             current_node = current_node.next
-            
 
+
+ll = LinkedList()
+ll.insertAtEnd('a')
+ll.insertAtBegin('b')
+ll.insertAtBegin('c')
+ll.insertAtEnd('o')
+ll.insertAtIndex('z',2)
+ll.updateNode('p',4)
+print(ll.sizeOfLL())
+ll.removeLastNode()
+ll.removeFirstNode()
+ll.removeAtIndex(1)
+print(ll.sizeOfLL())
+ll.removeNode('z')
+ll.printLL()
 
 
 
