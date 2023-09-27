@@ -129,7 +129,7 @@ ll.removeAtIndex(1)
 print(ll.sizeOfLL())
 ll.removeNode('z')
 ll.printLL()
-
+print(type(ll))
 
 
 
